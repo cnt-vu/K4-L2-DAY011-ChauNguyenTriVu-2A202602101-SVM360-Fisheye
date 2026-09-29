@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,35,Điều kiện ánh sáng ban ngày ổn định,Đánh giá khả năng phát hiện luồng phương tiện chính diện ở dải tốc độ hành trình
+front,hard,25,Ngược sáng gắt và người đi bộ băng cắt đột ngột,Kiểm tra độ tin cậy của tính năng phanh tự động khẩn cấp AEB trong tình huống rủi ro cao
+rear,normal,30,Lùi xe trong bãi đỗ quang đãng,Kiểm chuẩn khả năng nhận diện khoảng cách và vạch đỗ cơ bản khi lùi
+rear,hard,20,Đèn pha xe sau gây lóa và vật cản thấp sát cản sau,Đánh giá tính năng cảnh báo phương tiện cắt ngang khi lùi RCTA và phát hiện điểm mù thấp
+left,normal,25,Giao thông song song làn bên trái thông thường,Giám sát xe chạy cùng chiều và hỗ trợ giữ làn
+left,hard,20,Xe máy luồn lách sát sườn và đối tượng ở vùng seam nối góc trước-trái,Đánh giá cảnh báo va chạm điểm mù BSD và kiểm thử độ méo khi ghép ảnh BEV
+right,normal,25,Mép đường bên phải và vỉa hè nhìn rõ,Kiểm chuẩn ranh giới lề đường và chướng ngại vật tĩnh
+right,hard,20,Người đi xe đạp/ba bánh chen sát mép và seam nối góc sau-phải,Kiểm tra an toàn khi tấp lề hoặc rẽ phải và kiểm thử ghép nối đa camera tại góc xe

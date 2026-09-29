@@ -1,0 +1,21 @@
+{
+  "members": [
+    "ly",
+    "tri",
+    "vu"
+  ],
+  "assignments": {
+    "ly": "B4-mid",
+    "tri": "B2-mid",
+    "vu": "B3-dense"
+  },
+  "self": "vu",
+  "slice": "B3-dense",
+  "degrade": [],
+  "current_slice": "B3-dense",
+  "support_prefill": false,
+  "support_slice": "",
+  "prefill_box_ids": [
+    "adasind_145860.jpg:1"
+  ]
+}

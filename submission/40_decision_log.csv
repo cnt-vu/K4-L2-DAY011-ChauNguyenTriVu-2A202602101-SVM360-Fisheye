@@ -1,1 +1,5 @@
 id,date,question,decision,rationale,status
+D01,2026-09-29,Có vẽ box Pedestrian cho người dắt xe hai bánh không?,Tách thành 2 box Pedestrian và Bike riêng biệt,Quy tắc R03 nêu rõ người dắt xe không ngồi lái phải tách riêng người và xe,decided
+D02,2026-09-29,Phân loại xe ba bánh auto-rickshaw và xe lam Ấn Độ thế nào?,Gán nhãn ThreeWheeler thay vì Car,Quy tắc R04 quy định tất cả phương tiện 3 bánh chở người hoặc hàng hóa phải thuộc class ThreeWheeler,decided
+D03,2026-09-29,Có vẽ ego_body cho 2 frame ngoại lệ adasind_006840 và adasind_271039 không?,Không vẽ ego_body cho hai frame này,Quy tắc R07 quy định chỉ vẽ ego_body khi nhìn thấy thân xe; vẽ thừa ở frame không thấy là lỗi,decided
+D04,2026-09-29,Xử lý đối tượng ThreeWheeler bị méo cực mạnh và cắt cụt ở rìa trái frame adasind_199770 thế nào?,Báo cáo escalation lên guideline team để làm rõ quy chuẩn bounding box vùng mép rìa r/R > 0.85,Box trục thẳng ôm trọn phần méo chứa hơn 60% diện tích là nền đường và vành kính gây sai lệch khi chiếu sang BEV 360,escalated

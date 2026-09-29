@@ -1,1 +1,44 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L3,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,Tách người ngồi lái thành box Pedestrian riêng trong khi xe đã có box Bike,rework,v1.0.0,Người lái xe 2 bánh phải gộp chung vào 1 box Bike theo R03
+calib,C0,adasind_019560.jpg,L4+R6,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R04,Xe ba bánh auto-rickshaw bị gán nhầm thành Car,rework,v1.0.0,Theo R04 xe ba bánh chở người/hàng phải gán ThreeWheeler
+calib,C0,adasind_019560.jpg,L5+R5,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R04,Xe ba bánh trung cảnh bị gán thành Car thay vì ThreeWheeler,rework,v1.0.0,Cần phân biệt xe ba bánh với ô tô con
+calib,C0,adasind_019560.jpg,L6+R3,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R04,Xe ba bánh ở rìa trái méo quang học bị gán thành Car,rework,v1.0.0,Quan sát đặc điểm đầu xe ba bánh ở vùng rìa
+r2_qa,B3-dense,adasind_199770.jpg,L7,L_only,ATTRIBUTE,,P1,annotator,R05,ThreeWheeler chạm mép trái ảnh x=0 bị cắt nhưng truncated đang để false,rework,v1.0.0,Cần bật truncated=true cho đối tượng bị cắt mép khung hình
+r2_qa,B3-dense,adasind_145860.jpg,ego_body,L_only,IGNORE_SCOPE,,P0,annotator,R07,Thấy nắp ca-pô/thân xe ở đáy khung hình nhưng chưa có polygon ego_body,rework,v1.0.0,Cần vẽ polygon ignore_region ego_body
+r2_qa,B3-dense,adasind_167700.jpg,L5,L_only,WRONG_CLASS,,P1,annotator,R04,Phương tiện ba bánh ThreeWheeler bị gán nhầm sang Car,rework,v1.0.0,Cần sửa class thành ThreeWheeler
+r1_craft,B3-dense,adasind_167700.jpg,L8,na,IGNORE_SCOPE,,,,,,,,
+r1_craft,B3-dense,adasind_167700.jpg,L9,na,IGNORE_SCOPE,,,,,,,,
+r1_craft,B3-dense,adasind_167700.jpg,L5+R4,na,WRONG_CLASS,,,,,,,,
+r1_craft,B3-dense,adasind_167700.jpg,R2,na,MISSING,,,,,,,,
+r1_craft,B3-dense,adasind_167700.jpg,R8,na,MISSING,,,,,,,,
+r1_craft,B3-dense,adasind_199770.jpg,L5,na,IGNORE_SCOPE,,,,,,,,
+r1_craft,B3-dense,adasind_199770.jpg,L6,na,IGNORE_SCOPE,,,,,,,,
+r1_craft,B3-dense,adasind_199770.jpg,L7+R2,na,ATTRIBUTE,,,,,,,,
+r1_craft,B3-dense,adasind_199770.jpg,R3,na,MISSING,,,,,,,,
+r1_craft,B3-dense,adasind_199770.jpg,R4,na,MISSING,,,,,,,,
+r1_craft,B3-dense,adasind_199770.jpg,R5,na,MISSING,,,,,,,,
+r1_craft,B3-dense,adasind_199770.jpg,R6,na,MISSING,,,,,,,,
+r3_diag,B3-dense,adasind_167700.jpg,L6+R6,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,Người và Reference thấy nhưng Model bỏ sót do vật ở góc nghiêng,keep_with_reason,v1.0.0,Model bị gãy do ảnh hưởng góc phối cảnh fisheye
+r3_diag,B3-dense,adasind_167700.jpg,L7+R7,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,Vật thể nhìn thấy rõ ở L và R nhưng Model không phát hiện,keep_with_reason,v1.0.0,Model không quen với vật thể kích thước nhỏ ở vùng mid
+r3_diag,B3-dense,adasind_167700.jpg,L4+R9,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,Người gán nhãn và Reference đều gán đúng nhưng Model bỏ sót,keep_with_reason,v1.0.0,Model bỏ sót đối tượng ở vùng rìa
+r3_diag,B3-dense,adasind_167700.jpg,L5,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R04,Người gán nhãn gán box dư hoặc sai lớp so với reference,rework,v1.0.0,Cần kiểm tra lại đối tượng L5 trên ảnh gốc
+r3_diag,B3-dense,adasind_167700.jpg,R2+M7,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,Reference và Model đều thấy nhưng người gán nhãn bỏ sót,rework,v1.0.0,Vật thể đạt ngưỡng H>=40px người vẽ bị sót
+r3_diag,B3-dense,adasind_167700.jpg,R4+M4,RM_noL,MISSING,E1_annotator_error,P1,annotator,R04,Reference và Model nhận diện đúng ThreeWheeler nhưng L bị thiếu,rework,v1.0.0,Bổ sung box xe 3 bánh bị thiếu
+r3_diag,B3-dense,adasind_167700.jpg,R8+M9,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,Đối tượng có mặt ở Reference và Model nhưng L bỏ sót,rework,v1.0.0,Người gán nhãn bỏ sót do vật ở xa
+r3_diag,B3-dense,adasind_167700.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model sinh box ảo trên nền đường hoặc vật cản tĩnh,keep_with_reason,v1.0.0,False positive của model do nhận nhầm nền
+r3_diag,B3-dense,adasind_167700.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model dự đoán box ảo ở vùng méo,keep_with_reason,v1.0.0,Model bị nhiễu bởi đặc trưng méo góc rộng
+r3_diag,B3-dense,adasind_199770.jpg,L3+R7,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,Xe tải Truck nhìn rõ trên ảnh được L và R gán nhưng Model bỏ sót,keep_with_reason,v1.0.0,Model không nhận diện được xe tải bị méo
+r3_diag,B3-dense,adasind_199770.jpg,L1+R8,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,L và R cùng thấy ThreeWheeler nhưng Model không thấy,keep_with_reason,v1.0.0,Model gãy với ThreeWheeler
+r3_diag,B3-dense,adasind_199770.jpg,L7+R2,LR_noM,MISSING,E4_model_domain,P2,ai_team,R02,Xe ở rìa ngoài cùng L và R đều thấy nhưng Model không bắt được,keep_with_reason,v1.0.0,Model gãy hoàn toàn ở zone edge
+r3_diag,B3-dense,adasind_199770.jpg,R3+M10,RM_noL,MISSING,E1_annotator_error,P1,annotator,R01,Reference và Model đều có box vật thể nhưng L bỏ sót,rework,v1.0.0,Cần vẽ bổ sung vật thể này ở đợt rework
+r3_diag,B3-dense,adasind_199770.jpg,R4,R_only,MISSING,E1_annotator_error,P1,annotator,R01,Vật thể có trong Reference nhưng cả L và M đều bỏ sót,rework,v1.0.0,Kiểm tra lại xem vật thể có đạt ngưỡng H>=40px
+r3_diag,B3-dense,adasind_199770.jpg,R5,R_only,MISSING,E1_annotator_error,P1,annotator,R01,Xe nhỏ ở trung cảnh có trong Reference nhưng L chưa vẽ,rework,v1.0.0,Bổ sung box trong CVAT
+r3_diag,B3-dense,adasind_199770.jpg,R6,R_only,MISSING,E1_annotator_error,P1,annotator,R01,Người đi bộ/xe ở xa có trong Reference nhưng L bỏ sót,rework,v1.0.0,Kiểm tra chi tiết đối tượng
+r3_diag,B3-dense,adasind_199770.jpg,M4,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model bắt nhầm cấu trúc lề đường thành xe,keep_with_reason,v1.0.0,False positive từ model
+r3_diag,B3-dense,adasind_199770.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box ảo của model ở vùng đông đúc,keep_with_reason,v1.0.0,Model phân tán do mật độ vật thể cao
+r3_diag,B3-dense,adasind_199770.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box dự đoán ảo của model,keep_with_reason,v1.0.0,Sai số mô hình
+r3_diag,B3-dense,adasind_199770.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model gán box ảo ở góc ảnh,keep_with_reason,v1.0.0,Độ méo viền gây FP cho model
+r3_diag,B3-dense,adasind_199770.jpg,M9,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model bắt nhầm bóng cây/vật tĩnh thành xe,keep_with_reason,v1.0.0,Nhiễu nền
+r3_diag,B3-dense,adasind_199770.jpg,M11,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model bắt nhầm cấu trúc xe ego,keep_with_reason,v1.0.0,Model không biết ignore_region ego_body
+r3_diag,B3-dense,adasind_199770.jpg,M12,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box ảo của model ở rìa,keep_with_reason,v1.0.0,Nhiễu rìa
+r3_diag,B3-dense,adasind_199770.jpg,M13,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box ảo của model,keep_with_reason,v1.0.0,Nhiễu nền

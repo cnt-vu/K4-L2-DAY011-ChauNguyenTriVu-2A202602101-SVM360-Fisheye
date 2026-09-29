@@ -1,0 +1,9 @@
+round: r1_craft
+slice: B3-dense
+sha256: be486187e8907816e0364fec65bfece6109188e3ae121342c6fdc8a495d8c89b
+code: BE48-6187
+locked_at: 2026-09-29T12:33:28+07:00
+shapes: box=18, polygon=6
+prefill_kept: 1
+prefill_edited: 0
+new: 17
